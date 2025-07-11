@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    position: relative;  /* para que .container se posicione respecto al body */
+  overflow: hidden;
+}
+.wrapper{
+    width: 750px;
+    background: rgba(255, 255, 255, .1);
+    border: 4px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    color: #fff;
+    padding: 40px 35px 55px;
+    margin: 0 10px; 
+    transition: .5s;
+
+
+    position: relative;  /* para poder aplicar z-index */
+  z-index: 1;
+
+
+}
+.wrapper:hover{
+    border: 4px solid #0ef;
+    box-shadow: 0 0 20px #0ef,inset 0 0 20px #0ef;
+}
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wrapper:hover h1{
+    color: rgb(73, 255, 36);
+}
+
+.wrapper .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-box .input-field{
+    position: relative;
+    width: 48%;
+    height: 50px;
+    margin: 13px 0;
+}
+.input-box .input-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+    transition: .5s;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 900px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;          /* detrás del formulario */
+  pointer-events: none; /* para que el ratón “atraviese” la animación */
+  margin-top: 400px;
+}
+
+.container span{
+    position: absolute;
+    left: 600px;
+    width: 35px;
+    height: 4px;
+    background: #970202;
+    border-radius: 8px;
+    transform-origin: 198px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s /50));
+}
+@keyframes animateBlink{
+    0%{
+        background-color: rgb(15, 236, 133);
+    }
+    25%{
+        background: #ff1fec;
+    }
+}
+
+.wrapper:hover .input-field input{
+    border: 2px solid #0ef;
+    box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+.wrapper:hover .input-field i{
+    color: rgb(255, 52, 37);
+}
+
+
+.input-box .input-field input::placeholder{
+    color: #fff;
+}
+.input-box .input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.wrapper label{
+    display: inline-block;
+    font-size: 14.5px;
+    margin: 10px 0 23px;
+}
+.wrapper label input{
+    accent-color: #fff;
+    margin-right: 5px;
+}
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+.wrapper:hover button{
+    background-color: rgb(28, 145, 255);
+    color: #000;
+    box-shadow: 0 0 20px rgb(28, 145, 255);
+}
+@media (max-width: 576px){
+    .input-box .input-field{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
