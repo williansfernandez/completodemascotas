@@ -17,15 +17,13 @@ document.querySelectorAll('.toggle-password').forEach(toggle => {
 const emailBox = document.querySelector('.input-box input[type="email"]');
 const emailIcon = emailBox.closest('.input-box').querySelector('ion-icon[name^="mail"]');
 
-if (emailBox && emailIcon) { // Add checks to prevent errors if elements are not found
-  emailBox.addEventListener('input', () => {
-    const val = emailBox.value.trim();
-    const isGmail = /@gmail\.com$/i.test(val);
+emailBox.addEventListener('input', () => {
+  const val = emailBox.value.trim();
+  const isGmail = /@gmail\.com$/i.test(val);
 
-    if (isGmail) {
-      emailIcon.setAttribute('name', 'mail-open-outline');
-    } else {
-      emailIcon.setAttribute('name', 'mail');
-    }
-  });
-}
+  if (isGmail) {
+    emailIcon.setAttribute('name', 'mail-open-outline');
+  } else {
+    emailIcon.setAttribute('name', 'mail');
+  }
+});
