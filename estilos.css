@@ -57,9 +57,15 @@ body {
 .logo-green {
     color: #7fc143;
   }
+.main-nav { /* Added to allow nav to take available space */
+    flex-grow: 1;
+    display: flex; /* To help center the ul or manage its content */
+    justify-content: center; /* Example: centers the ul if it's narrower than nav */
+}
 .main-nav ul {
     list-style: none;
     gap: 1.5rem;
+    /* display: flex; already on ul via .flex class in HTML, so this is redundant here if .flex is always on ul */
   }
 .main-nav a {
     text-decoration: none;
@@ -76,6 +82,11 @@ body {
     position: relative;
     text-decoration: none;
     color: #333;
+  }
+.site-header .icons { /* Added to control layout of icon and login/register buttons */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
   }
 .cart .badge {
     position: absolute;
@@ -247,13 +258,15 @@ margin-top: 50px;
 }
 .login-button {
     background-color: #c00000; /* rojo oscuro */
-    color: white;
+    color: white !important; /* Asegurar color de texto para <a> */
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    text-decoration: none; /* Para asegurar que los <a> no tengan subrayado */
+    display: inline-block; /* Para asegurar que el padding y otras propiedades de bloque se apliquen bien a <a> */
     transition: background-color 0.3s, transform 0.2s;
 }
 
