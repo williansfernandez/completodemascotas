@@ -4,12 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro de Mascotas Comunitarias</title>
-  <link rel="stylesheet" href="main.css" /> {/* Replaced estilos.css with main.css */}
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
     <div class="top-bar">
@@ -23,7 +18,7 @@
   </div>
   <header class="site-header">
     <div class="container flex-space">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-green">CUIDA</span><span>NOS</span>
       </a>
       <nav class="main-nav">
@@ -33,15 +28,16 @@
             <a href="publicar.php">MASCOTAS ▾</a>
 
           </li>
-          <li><a href="#formulario-merged">REGISTRAR MASCOTA</a></li>
+          {/* <li><a href="#">OUR PRODUCT</a></li> Eliminado */}
+          <li><a href="formulario.html">REGISTRAR MASCOTA</a></li> {/* Antes ADOPCION DE MASCOTAS */}
           <li><a href="publicar.php">NOTICIAS</a></li>
-          <li><a href="#contactos-merged">CONTACTO</a></li>
+          <li><a href="contactos.html">CONTACTO</a></li>
         </ul>
       </nav>
       <div class="icons">
         <a href="#" class="icon"></a>
-        <a href="#login-merged" class="login-button">Login</a>
-        <a href="#register-merged" class="login-button" style="margin-left: 10px;">Registrar Usuario</a>
+        <a href="login.html" class="login-button">Login</a>
+        <a href="register.html" class="login-button" style="margin-left: 10px;">Registrar Usuario</a>
       </div>
     </div>
   </header>
@@ -78,7 +74,7 @@
       <li>Los perros comunitarios a menudo forman parte de la rutina diaria de barrios enteros.</li>
     </ul>
   </section>
-  {/* Removed extra closing </section> tag here */}
+  </section>
   <section class="what-we-do">
     <div class="container flex-container">
       <div class="what-we-do-image">
@@ -131,290 +127,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  {/* script1.js was removed as it's not found */}
-
-  <section id="register-merged">
-    <div class="wrapper">
-        <form action="">
-            <h1>Registrar</h1>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" placeholder="Nombre Completo" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Username" required>
-                    <i class='bx bxs-user'></i>
-                </div>
-            </div>
-
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="email" placeholder="Email" required>
-                    <i class='bx bxs-envelope' ></i>
-                </div>
-                <div class="input-field">
-                    <input type="number" placeholder="Phone Number" required>
-                    <i class='bx bxs-phone' ></i>
-                </div>
-            </div>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="password" placeholder="Contraseña" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <div class="input-field">
-                    <input type="password" placeholder="Confirmar Contraseña" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-            </div>
-            <label><input type="checkbox">I hereby declare that...........</label>
-            <button type="submit" class="btn">Registrar</button>
-        </form>
-    </div>
-  </section>
-
-  <section id="login-merged">
-    <div class="login-box">
-      <form action="">
-        <h2>Login</h2>
-        <div class="input-box">
-          <span class="icon">
-              <ion-icon name="mail"></ion-icon>
-          </span>
-          <input type="email" placeholder="" required>
-          <label>Email</label>
-        </div>
-        <div class="input-box">
-          <span class="icon toggle-password"  >
-              <ion-icon name="lock-closed"></ion-icon>
-          </span>
-          <input type="password" placeholder="" required>
-          <label>Contraseña</label>
-        </div>
-        <div class="remember-forgot">
-          <label><input type="checkbox">Recordar</label>
-          <a href="#"> ¿Olvidastes tu contraseña?</a>
-        </div>
-        <button type="submit">Iniciar Sesión</button>
-        <div class="register-link">
-          <p>¿No tienes cuenta?<a href="#register-merged">Registrar</a></p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section id="formulario-merged">
-    <div class="formbold-main-wrapper">
-      <div class="formbold-form-wrapper">
-        <img src="perros.jpg" alt="Adoptable pets" class="formbold-img" />
-        <form action="guardar_encuesta.php" method="POST" enctype="multipart/form-data">
-          <div class="formbold-form-title">
-            <h2 class="">Register now</h2>
-            <p>
-              Porque cada vida importa: cuidamos, protegemos y damos voz a quienes no pueden pedir ayuda.
-            </p>
-          </div>
-          <div class="formbold-input-flex">
-            <div>
-              <label for="firstname" class="formbold-form-label">
-                  Nombre
-              </label>
-              <input
-                type="text"
-                name="firstname"
-                id="firstname"
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="lastname" class="formbold-form-label">Apellido   </label>
-              <input
-                type="text"
-                name="lastname"
-                id="lastname"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-          <div class="formbold-input-flex">
-            <div>
-              <label for="email" class="formbold-form-label"> Email </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="phone" class="formbold-form-label"> Numero de celular </label>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-          <div class="formbold-mb-3">
-            <label for="address" class="formbold-form-label">
-              Direccion
-            </label>
-            <input
-              type="text"
-              name="address"
-              id="address"
-              class="formbold-form-input"
-            />
-          </div>
-          <div class="formbold-mb-3">
-            <label for="address2" class="formbold-form-label">
-              Direccion cercana
-            </label>
-            <input
-              type="text"
-              name="address2"
-              id="address2"
-              class="formbold-form-input"
-            />
-          </div>
-          <div class="formbold-input-flex">
-            <div>
-              <label for="state" class="formbold-form-label"> Estado/Provincia </label>
-              <input
-                type="text"
-                name="state"
-                id="state"
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="country" class="formbold-form-label"> Pais </label>
-              <input
-                type="text"
-                name="country"
-                id="country"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-          <div class="formbold-input-flex">
-            <div>
-              <label for="post" class="formbold-form-label"> Codigo Postal </label>
-              <input
-                type="text"
-                name="post"
-                id="post"
-                class="formbold-form-input"
-              />
-            </div>
-            <div>
-              <label for="area" class="formbold-form-label"> Codigo del area </label>
-              <input
-                type="text"
-                name="area"
-                id="area"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-          <div class="formbold-mb-3">
-            <label for="description" class="formbold-form-label">Estado de la mascota</label>
-            <textarea
-              id="description"
-              name="description"
-              class="formbold-form-input"
-              rows="5"
-              placeholder="Escribe la situacion aquí.."
-            ></textarea>
-          </div>
-          <div class="formbold-mb-3">
-            <label for="imagen" class="formbold-form-label">Foto de la mascota</label>
-            <input
-              type="file"
-              name="imagen"
-              id="imagen"
-              class="formbold-form-input"
-              accept="image/*"
-            />
-          </div>
-          <div class="formbold-mb-3">
-            <label class="formbold-form-label">Seleccionar ubicación en el mapa:</label>
-            <img src="mapa3.png" alt="Abrir mapa" style="width: 100px; cursor: pointer;" id="abrir-mapa">
-          </div>
-          <div id="contenedor-mapa" style="display: none; margin-bottom: 1rem;">
-            <div id="mapa" style="height: 400px; border: 1px solid #ccc; border-radius: 5px;"></div>
-            <p>📍 Latitud: <span id="mostrar-latitud">-</span> | Longitud: <span id="mostrar-longitud">-</span></p>
-          </div>
-          <input type="hidden" name="latitud" id="latitud">
-          <input type="hidden" name="longitud" id="longitud">
-          <script>
-            let mapa, marcador;
-            document.getElementById('abrir-mapa').addEventListener('click', () => {
-              const contenedor = document.getElementById('contenedor-mapa');
-              contenedor.style.display = 'block';
-              if (!mapa) {
-                mapa = L.map('mapa').setView([-16.409, -71.537], 13);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                  attribution: '© OpenStreetMap contributors'
-                }).addTo(mapa);
-                mapa.on('click', function(e) {
-                  const lat = e.latlng.lat.toFixed(6);
-                  const lng = e.latlng.lng.toFixed(6);
-                  document.getElementById("mostrar-latitud").textContent = lat;
-                  document.getElementById("mostrar-longitud").textContent = lng;
-                  document.getElementById("latitud").value = lat;
-                  document.getElementById("longitud").value = lng;
-                  if (marcador) {
-                    mapa.removeLayer(marcador);
-                  }
-                  marcador = L.marker([lat, lng]).addTo(mapa)
-                    .bindPopup("Ubicación seleccionada").openPopup();
-                });
-                if (navigator.geolocation) {
-                  navigator.geolocation.getCurrentPosition(function(pos) {
-                    mapa.setView([pos.coords.latitude, pos.coords.longitude], 15);
-                  });
-                }
-              }
-              setTimeout(() => {
-                mapa.invalidateSize();
-              }, 100);
-            });
-          </script>
-          <div class="formbold-mb-3 formbold-checkbox-container">
-            <label class="formbold-checkbox-label">
-              <input type="checkbox" class="formbold-real-checkbox" required />
-              <span class="formbold-custom-checkbox"></span>
-                Acepto los <a href="#">términos, condiciones y políticas definidas</a>
-            </label>
-          </div>
-          <button class="formbold-btn">Registrar ahora</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="contactos-merged">
-    <main>
-        <section id="contacto">
-            <h2>Información de Contacto</h2>
-            <p><strong>Teléfono:</strong> 123-456-7890</p>
-            <p><strong>Email:</strong> <a href="mailto:contacto@patitasfelices.org">contacto@patitasfelices.org</a></p>
-            <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad Esperanza</p>
-        </section>
-        <section id="otros-detalles">
-            <h2>Otros Detalles</h2>
-            <p><strong>Horario de Atención:</strong> Lunes a Sábado: 9am - 6pm</p>
-            <p><strong>Nuestra Misión:</strong> Rescatamos, rehabilitamos y reubicamos mascotas necesitadas.</p>
-            <p><strong>Animales que Albergamos:</strong> Perros y Gatos</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Patitas Felices. Todos los derechos reservados.</p>
-    </footer>
-  </section>
-  <script src="main.js" defer></script>
+  {/* <script src="script1.js" type="module"></script> Enlace a script no encontrado eliminado */}
 </body>
 </html>
